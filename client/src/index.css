@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Glass panel */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.dark .glass-panel {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(30, 41, 59, 0.8);
+}
+
+/* Live Background Floating Orb Keyframes */
+@keyframes orb-float-1 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(60px, -70px) scale(1.15);
+  }
+  66% {
+    transform: translate(-40px, 40px) scale(0.9);
+  }
+}
+
+@keyframes orb-float-2 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(-70px, 50px) scale(1.1);
+  }
+  66% {
+    transform: translate(50px, -40px) scale(0.92);
+  }
+}
+
+@keyframes orb-float-3 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(0.95);
+  }
+  50% {
+    transform: translate(45px, 60px) scale(1.2);
+  }
+}
+
+@keyframes live-grid-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
+
+/* Flowing Learning Waves Keyframes */
+@keyframes wave-flow-1 {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(1.18);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+
+@keyframes wave-flow-2 {
+  0% {
+    transform: translateX(-50%) translateZ(0) scaleY(1.1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.92);
+  }
+  100% {
+    transform: translateX(0%) translateZ(0) scaleY(1.1);
+  }
+}
+
+/* Floating Academic Pills Keyframes */
+@keyframes academic-float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(2deg);
+  }
+}
+
+@keyframes academic-float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(16px) rotate(-2.5deg);
+  }
+}
+
+@keyframes academic-float-fast {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-18px) scale(1.04);
+  }
+}
+
+.animate-orb-1 {
+  animation: orb-float-1 16s ease-in-out infinite;
+}
+
+.animate-orb-2 {
+  animation: orb-float-2 20s ease-in-out infinite;
+}
+
+.animate-orb-3 {
+  animation: orb-float-3 24s ease-in-out infinite;
+}
+
+.animate-wave-flow-1 {
+  animation: wave-flow-1 20s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+}
+
+.animate-wave-flow-2 {
+  animation: wave-flow-2 26s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+}
+
+.animate-academic-1 {
+  animation: academic-float-slow 7s ease-in-out infinite;
+}
+
+.animate-academic-2 {
+  animation: academic-float-reverse 9s ease-in-out infinite;
+}
+
+.animate-academic-3 {
+  animation: academic-float-fast 6s ease-in-out infinite;
+}
+
+.live-grid-pattern {
+  background-image: radial-gradient(rgba(99, 102, 241, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+  animation: live-grid-move 20s linear infinite;
+}
+
+.dark .live-grid-pattern {
+  background-image: radial-gradient(rgba(129, 140, 248, 0.18) 1px, transparent 1px);
+}

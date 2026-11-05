@@ -1,0 +1,13 @@
+# Ignore Node modules
+node_modules/
+
+# Ignore environment variables
+.env
+.env.local
+
+# Ignore build files
+dist/
+build/
+
+# Ignore logs
+npm-debug.log*
