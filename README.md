@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ClassConnect 🎓
 > **Connecting Students, Simplifying Campus Life.**
 
@@ -203,3 +204,6 @@ ClassConnect/
 ## 🛡️ License & Academic Integrity
 ClassConnect is developed for higher education innovation. Built with high cohesion, modularity, and accessibility standards.
 
+=======
+# Class_connect
+>>>>>>> 8a95b048be5f2b67b8bab655e2fc2dfd8bd87be2
